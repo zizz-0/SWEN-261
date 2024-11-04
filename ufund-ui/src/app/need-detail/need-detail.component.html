@@ -1,0 +1,75 @@
+<div *ngIf="need" id="contents">
+  <div class="header">
+    <h2> <img src={{need.image}} style="width:100px;height:100px;"/></h2>
+    <h2> <img src={{need.urgencyImage}} alt="urgent" style="width:25px;height:25px;"/> {{ need.name | uppercase }} Details</h2>
+  </div>
+  <div *ngIf="userRole === 'admin'">
+    <label for="need-name">Need name:</label>
+    <input id="need-name" [(ngModel)]="need.name" placeholder="Need name"/>
+
+    <label for="need-description">Need description:</label>
+    <input id="need-description" [(ngModel)]="need.description" placeholder="Need description"/>
+
+    <label for="need-price">Need price:</label>
+    <input id="need-price" [(ngModel)]="need.price" placeholder="Need price"/>
+
+    <label for="need-type">Need type:</label>
+    <select id="need-type" [(ngModel)]="need.type">
+      <option value="EQUIPMENT">EQUIPMENT</option>
+      <option value="PROGRAM">PROGRAM</option>
+      <option value="DONATE">DONATE</option>
+      <option value="ADOPTPANDA">ADOPTPANDA</option>
+    </select>
+
+    <label for="need-image">Need Image:</label>
+    <select id="need-image" [(ngModel)]="need.image">
+      <option value="assets/images/EQUIPMENT.jpg">EQUIPMENT.jpg</option>
+      <option value="assets/images/PROGRAM.jpg">PROGRAM.jpg</option>
+      <option value="assets/images/DONATE.jpg">DONATE.jpg</option>
+      <option value="assets/images/ADOPTPANDA.jpg">ADOPTPANDA.jpg</option>
+    </select>
+
+    <label for="need-progress">Amount fulfilled: {{need.quantityFulfilled}}/{{need.quantityNeeded}}</label>
+    <progress id="need-progress" class="completed" value={{need.quantityFulfilled}} max={{need.quantityNeeded}} style="height:15px;width:30%"></progress>
+  
+    <label for="need-urgency">Need urgency:</label>
+    <select id="need-urgency" [(ngModel)]="need.urgency">
+      <option value="LOW">LOW</option>
+      <option value="HIGH">HIGH</option>
+    </select>
+
+    <div>
+      <button type="button" (click)="goBack()">Go back</button>
+      <button type="button" (click)="save()" *ngIf="userRole === 'admin'">Save</button>
+    </div>
+  </div>
+  <div *ngIf="userRole !== 'admin'">
+    <label for="need-name">Need name:</label>
+    <p id="need-name">{{need.name}}</p>
+
+    <label for="need-description">Need description:</label>
+    <p id="need-description">{{need.description}}</p>
+
+    <label for="need-price">Need price:</label>
+    <p id="need-price" >{{need.price}}</p>
+
+    <label for="need-type">Need type:</label>
+    <p id="need-type" >{{need.type}}</p>
+
+    <label for="need-progress">Amount fulfilled: {{need.quantityFulfilled}}/{{need.quantityNeeded}}</label>
+    <progress id="need-progress" class="completed" value={{need.quantityFulfilled}} max={{need.quantityNeeded}} style="height:15px;width:30%"></progress>
+
+    <label for="need-quantity">Quantity needed:</label>
+    <p id="need-quantity" >{{need.quantityNeeded}}</p>
+
+    <label for="need-urgency">Need Urgency:</label>
+    <p id="need-urgency" >{{need.urgency}}</p>
+  
+    <label for="quantity-to-add">Quantity to add to basket: </label>
+    <input id="quantity-to-add" [(ngModel)]="quantityToAdd"/>
+
+    <div><button type="button" (click)="addToBasket()">Add to basket</button></div>
+    <p>{{this.message}}</p>
+    <button type="button" (click)="goBack()">Go back</button>
+  </div>
+</div>

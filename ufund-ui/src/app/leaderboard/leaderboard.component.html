@@ -1,0 +1,20 @@
+<div class="board">
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Contribution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rank of ranks">
+                <td>{{rank[0]}}</td>
+                <td>{{rank[1]}}</td>
+                <td>{{rank[2]}}</td>
+                <td>${{rank[3]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,7 @@
+<h3>Past Contributions:</h3>
+<ol>
+    <li *ngFor="let entry of needMap | keyvalue">
+        {{entry.key.name}}; quantity: {{entry.value}} 
+    </li>
+</ol>
+<h3>Total contributed: ${{total}}</h3>

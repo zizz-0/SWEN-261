@@ -1,0 +1,29 @@
+commit be1b2095d4d67a817a4f1d8427b470cf1ba3d1f5
+Author: Oscar Li <ol8432@rit.edu>
+Date:   Tue Sep 26 10:50:07 2023 -0400
+
+    added name to readme
+
+commit 771b200bd7e10fe3649da23cd61c6ca1e4b8ce5f
+Author: Ryanerror <ryangarvin19@gmail.com>
+Date:   Tue Sep 26 10:16:12 2023 -0400
+
+    added my name
+
+commit c73b8ff8920eb3b2357b767288f6ad837c02baae
+Author: Zoe Rizzo <zjr1377@rit.edu>
+Date:   Tue Sep 26 09:28:23 2023 -0400
+
+    added placeholder for member5
+
+commit cda38ae58a3ddd53a720d1badb6edb9a94e69385
+Author: zizz0 <zoejrizzo@gmail.com>
+Date:   Tue Sep 26 09:17:19 2023 -0400
+
+    Added Zoe Rizzo name to README
+
+commit 2dd1ea5a82b825195bfffff80046e561513ead3a
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Tue Sep 26 13:13:01 2023 +0000
+
+    Initial commit

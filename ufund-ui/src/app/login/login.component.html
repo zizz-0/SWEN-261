@@ -1,0 +1,29 @@
+<body>
+    <div class = "container">
+        <div class = "login">
+            <p>Username:</p>
+            <input #userName (keyup)="onUsernameUpdate(userName.value)">
+            <p>Password:</p>
+            <input id = "password" [type]="showPassword ? 'text' : 'password'"   #pass (keyup)="onPasswordUpdate(pass.value)">
+            <button class="passwordButton" (click)="hidePassword()">{{showPassword ? 'Hide password':'Show Password' }}</button>
+            <div class = "buttons">
+                <button type="button" (click)="login()">Login</button>
+                <button type="button" (click)="createAccount()">Create Account</button>
+            </div>
+            <p>{{this.message}}</p>
+        </div>
+        <div class = "goals">
+            <h2>The mission of our non-profit is to ensure the preservation of the endangered Giant Pandas.</h2>
+            <h3>Our goals:</h3>
+            <div>
+                <li>Ensure that Giant Pandas perservere and thrive</li>
+                <li>Provide panda centers with necessary medical equipment and supplies</li>
+                <li>Aid efforts to reintroduce pandas into their natural habitats</li>
+                <li>Aid efforts to preserve the panda's natural habitats</li>
+            </div>
+        </div>
+        <div class = "image-banner">
+            <img src="assets/images/giant_panda_banner.png" alt="giant pandas">
+        </div>
+    </div>
+</body>

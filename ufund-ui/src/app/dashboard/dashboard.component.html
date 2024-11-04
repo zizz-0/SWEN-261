@@ -1,0 +1,21 @@
+<h2>Top Needs</h2>
+<div class="needs-menu">
+  <a *ngFor="let need of needs"
+      routerLink="/detail/{{need.id}}">
+      {{need.name}}
+  </a>
+</div>
+
+<div class="container">
+  <div class="progress-bar">
+    <div>
+      <label for="need-progress">Total Needs Progress: {{quantityFulfilled}}/{{quantityNeeded}} Fulfilled</label>
+    </div>
+      <progress id="need-progress" class="completed" value={{quantityFulfilled}} max={{quantityNeeded}} style="height:20px;width:40%"></progress>
+  </div>
+  <div class="search">
+    <img src="assets/images/urgent.jpg" alt="urgent" style="width:25px;height:25px;"/> = Urgent Need
+    <app-need-search></app-need-search>
+  </div>
+</div>
+

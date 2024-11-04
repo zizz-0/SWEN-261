@@ -1,0 +1,43 @@
+label {
+  color: #435960;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  margin-left: 30px;
+  font-family:'Trebuchet MS';
+}
+select, input {
+  font-size: 1em;
+  padding: 0.5rem;
+  background-color: transparent;
+  margin-left: 30px;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: .5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left: 30px;
+  font-family:'Trebuchet MS';
+}
+
+button:hover {
+  background-color: #205F40;
+  color: white;
+}
+
+h2 {
+  margin-left: 30px;
+  font-family:'Trebuchet MS';
+}
+
+.passwordButton{
+  font-size: x-small;
+  display: block;
+  height: min-content;
+  padding: .5rem;
+  margin-left: 1.75rem;
+}

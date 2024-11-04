@@ -1,0 +1,75 @@
+/* NeedDetailComponent's private CSS styles */
+
+#contents {
+  margin-left: 40px;
+}
+
+.header h2{
+  margin-bottom: 30px;
+  display:block;
+  font-family:'Trebuchet MS';
+}
+
+label {
+  color: #435960;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-family:'Trebuchet MS';
+}
+
+input {
+  width: 50%;
+  font-family:'Trebuchet MS';
+}
+
+select, input, p {
+  font-size: 1em;
+  padding: .5rem;
+  background-color: transparent;
+  font-family:'Trebuchet MS';
+}
+
+button {
+  margin-top: 20px;
+  margin-right: .5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family:'Trebuchet MS';
+}
+button:hover {
+  background-color: #205F40;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+/* input[readonly], input[readonly]:hover {
+  border: black dotted 0.1px;
+  cursor: default;
+  font-family:'Trebuchet MS';
+} */
+
+progress {
+  background: none;
+}
+
+progress::-webkit-progress-bar {
+	height:15px;
+	width:80%;
+	background-color:#dadada;
+	border-radius:20px;
+}
+
+progress::-webkit-progress-value {
+	display:inline-block;
+	height:15px;
+  padding-left:50px; /* Rounded corners requires a padding */
+	border-radius:20px;
+  background: #205F40;
+}

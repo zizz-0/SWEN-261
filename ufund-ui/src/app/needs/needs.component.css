@@ -1,0 +1,166 @@
+/* NeedsComponent's private CSS styles */
+.needs {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+  margin-left: 1.5rem;
+  font-family:'Trebuchet MS';
+}
+
+input {
+  display: block;
+  width: 50%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  margin-left: 1.5rem;
+}
+
+.needs li {
+  position: relative;
+  cursor: pointer;
+  font-family:'Trebuchet MS';
+}
+
+.needs li:hover {
+  left: .1em;
+}
+
+.needs a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  margin:0.75rem;
+  padding: 0em 0.3em 0em 0em;
+  height: 2em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  font-family:'Trebuchet MS';
+}
+
+.needs a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.needs a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.needs .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0em 1em 0em 0.7em;
+  background-color: rgb(95, 159, 103);
+  line-height: 1em;
+  left: -1px;
+  top: -4px;
+  height: 2.3em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+  font-family:'Trebuchet MS';
+}
+
+.needs .title{
+  line-height: 1em;
+  left: -1px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  margin-top: .2em;
+  border-radius: 4px 0 0 4px;
+  top:-15px;
+  font-family:'Trebuchet MS';
+}
+
+.add-button {
+ padding: .5rem 1.5rem;
+ font-size: 1rem;
+ margin-bottom: 2rem;
+ margin-left: 1.5rem;
+ font-family:'Trebuchet MS';
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+button.toggle {
+  position: absolute;
+  left: 310px;
+  top: 5px;
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.toggle:hover {
+  background-color: #525252;
+  color: white;
+}
+
+.all_needs, .add_need {
+  margin-top: 50px;
+}
+
+.addNeed, .needs, .searchNeed {
+  margin-left: 1.5rem;
+}
+
+.searchNeed {
+  margin-top: 10px;
+}
+
+progress.completed::webkit-progress-bar {
+  background-color: gold;
+  color: gold;
+}
+
+div h3 {
+  text-decoration: underline;
+  margin-left: 1.5rem;
+  font-family:'Trebuchet MS';
+}
+
+div h2{
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-family:'Trebuchet MS';
+}
+
+.needs label {
+  margin-left: 1.5rem;
+  font-family:'Trebuchet MS';
+}
+
+progress {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  background: none;
+}
+
+progress::-webkit-progress-bar {
+	height:15px;
+	width:80%;
+	background-color:#dadada;
+	border-radius:100px;
+}
+
+progress::-webkit-progress-value {
+	display:inline-block;
+	height:15px;
+  padding-left:50px;
+	border-radius:100px;
+  background: #205F40;
+}

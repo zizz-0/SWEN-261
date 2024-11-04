@@ -1,0 +1,18 @@
+<div class = header>
+  <img src="assets/images/giant_panda_banner_long.png" alt="giant pandas">
+  <h1>{{ title }}</h1>
+</div>
+<div *ngIf="!loggedIn">
+  <app-login (loggedInEmitter)="onLogin($event)"></app-login>
+</div>
+<div *ngIf="loggedIn">  
+  <button class="profile-image"routerLink="/profiles" *ngIf="userRole !== 'admin'"></button>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/needs">Needs Cupboard</a>
+    <a routerLink="/basket" *ngIf="userRole !== 'admin'">Funding Basket</a>  
+    <a routerLink="/dashboard" (click)="logOut()" class = "log_out">Log Out</a>
+    <a routerLink="/leaderboard">Community Leaderboard</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

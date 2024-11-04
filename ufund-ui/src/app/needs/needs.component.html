@@ -1,0 +1,74 @@
+<!-- <h2>Needs Cupboard</h2> -->
+
+<div class="search_needs">
+  <h3>Search For A Need</h3>
+  <div class="searchNeed">
+    <app-need-search></app-need-search>
+  </div>
+</div>
+
+<div class="add_need">
+  <div *ngIf=isAdmin> <!--IF USER IS ADMIN RENDER, IF USER ISNT ADMIN DONT RENDER-->
+    <h3>Add Needs</h3>
+    <div class = "addNeed">
+      <!--<label for="new-need">Need name: </label>-->
+      <input id="new-need" placeholder="Need Name" #needName />
+      <input id="need-description" placeholder="Need Description" #needDescription />
+      <select id="need-type" (change)="needTypeSelection($event)" #needType>
+        <option value="" disabled selected>Need Type</option>
+        <option value="EQUIPMENT">EQUIPMENT</option>
+        <option value="PROGRAM">PROGRAM</option>
+        <option value="DONATE">DONATE</option>
+        <option value="ADOPTPANDA">ADOPTPANDA</option>
+      </select>
+      <div>
+      <select id="need-image" (change)="needImageSelection($event)" #needImage>
+        <option value="" disabled selected>Need Image</option>
+        <option value="assets/images/EQUIPMENT.jpg">EQUIPMENT.jpg</option>
+        <option value="assets/images/PROGRAM.jpg">PROGRAM.jpg</option>
+        <option value="assets/images/DONATE.jpg">DONATE.jpg</option>
+        <option value="assets/images/ADOPTPANDA.jpg">ADOPTPANDA.jpg</option>
+      </select>
+    </div>
+
+      <input id="new-need" placeholder="Need Price" #needPrice />
+      <input id="new-need" placeholder="Quantity Needed" #needQuantity />
+      <select id="need-urgency" (change)="needUrgencySelection($event)" #needUrgency>
+        <option value="" disabled selected>Need Urgency</option>
+        <option value="LOW">LOW</option>
+        <option value="HIGH">HIGH</option>
+      </select>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <div><button type="button" class="add-button" (click)="add(needName.value, needPrice.value, needType.value, needQuantity.value, needDescription.value, needUrgency.value); needType.selectedIndex=0; needUrgency.selectedIndex=0; needName.value=''; needPrice.value=''; needQuantity.value=''; needDescription.value=''">
+      Add need
+    </button>
+  </div>
+    <p>{{needErrorMessage}}</p>
+  </div>
+</div>
+
+<div class="all_needs">
+  <h3>All Needs</h3>
+  <h2><img src="assets/images/urgent.jpg" alt="urgent" style="width:25px;height:25px;"/> = Urgent Need</h2>
+  <ul class="needs">
+    <li *ngFor="let need of needs">
+      <a routerLink="/detail/{{need.id}}"> 
+        <span class="badge"><img src={{need.urgencyImage}} alt="urgent" style="width:25px;height:25px;"/></span>
+        <span class="title">{{need.name}}</span>
+      </a> 
+      <div *ngIf="isAdmin">
+        <button type="button" class="toggle" title="delete need"
+          (click)="delete(need)">x</button>
+      </div>
+      <div *ngIf="! isAdmin">
+        <button type="button" class="toggle" title="add need to basket"
+          (click)="addToBasket(need)">+</button>
+      </div>
+      <div>
+        <label for="need-progress">Amount fulfilled: {{need.quantityFulfilled}}/{{need.quantityNeeded}}</label>
+      </div>
+      <progress id="need-progress" class="completed" value={{need.quantityFulfilled}} max={{need.quantityNeeded}} style="height:25px;width:75%"></progress>
+    </li>
+  </ul>
+</div>

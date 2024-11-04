@@ -1,0 +1,17 @@
+<div id="funding-basket">
+    <ul class="funding-basket">
+        <li *ngFor="let need of needs">
+          <a routerLink="/detail/{{need.id}}">
+            <span class="badge">{{needMap.get(need)}}</span> {{need.name}}
+          </a>
+          <span>
+            <button class="changeQuantity" title="increase quantity" (click)="changeQuantity(need,1)">+</button>
+            <button class="changeQuantity" title="decrease quantity" (click)="changeQuantity(need,-1)">-</button>
+          </span>
+          <button type="button" class="delete" title="delete need"
+            (click)="delete(need)">x</button>
+        </li>
+      </ul>
+      <p>Total Price: {{ totalPrice | currency }}</p>
+      <button class="checkout" title="checkout" (click)="checkout()">checkout</button>
+</div>
