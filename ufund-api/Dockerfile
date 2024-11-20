@@ -17,4 +17,4 @@ RUN mvn clean package
 EXPOSE 8080
 
 # Command to run the application using the generated JAR file
-CMD ["java", "-jar", "target/ufund-api-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/target/ufund-api-0.0.1-SNAPSHOT.jar"]
